@@ -1,3 +1,5 @@
+
+
 # -*- coding: utf-8 -*-
 """
 Created on Tue Mar 10 10:24:55 2020
@@ -60,17 +62,25 @@ mergedDf['cases']=cases
 tab=mergedDf['cases'].sort_values(ascending=False).head(10)
 ind=tab.index
 tab.plot(kind='bar')
- 
+plt.ylabel("Counts of Confirmed Cases")
+plt.title("Confirmed Cases of Worst Hit Countries")
+
 tab2=mergedDf['recovery_rate'].sort_values(ascending=False).head(10)
 tab2.plot(kind='bar')
 tab22=mergedDf['recovery_rate'].loc[ind].sort_values(ascending=False)
 tab22.plot(kind='bar')
+plt.ylabel("Recovery rates")
+plt.title("Recovery Rates of Worst Hit Countries")
 
 
 tab3=mergedDf['death_rate'].sort_values(ascending=False).head(10)
 tab3.plot(kind='bar')
 tab33=mergedDf['death_rate'].loc[ind].sort_values(ascending=False)
 tab33.plot(kind='bar')
+plt.ylabel("Death rates")
+plt.title("Death Rates of Worst Hit Countries")
+
+
 
 
 
